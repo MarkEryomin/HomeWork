@@ -7,3 +7,12 @@
 
 # 3 2 4 -> yes
 # 3 2 1 -> no
+
+n=int(input('Введите размер шоколадки по горизонтали: '))
+m=int(input('Введите размер шоколадки по вертикали: '))
+k=int(input('Введите необходимое количество ломтиков: '))
+
+if (m%k==0 and k>=m ) or (n%k==0 and k>=n ) or ((((m*n)%k==0 and (k>=m and k>=n)) or ((m*(n-1))%k==0 and (k>=m and k>=n)) or (((m-1)*n)%k==0 and (k>=m and k>=n))) and (m*n)>k):
+    print('yes')
+else:
+    print('no')

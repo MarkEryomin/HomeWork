@@ -5,6 +5,7 @@
 # 123 -> 6 (1 + 2 + 3)
 # 100 -> 1 (1 + 0 + 0)
 
+
 flag=True
 while flag:
     n=input('Введите трёхзначное число : ')
@@ -25,6 +26,7 @@ while n>0:
     sum=sum+x
     n=n//10
 print(sum)
+
 
 
 

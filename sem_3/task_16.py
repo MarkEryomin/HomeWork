@@ -9,3 +9,16 @@
 
 # 1 2 1 2 2
 # Вывод: 2
+
+import random
+
+
+A=int(input("Введите длинну массива : "))
+X=int(input("Введите искомое число : "))
+count=0
+list=[random.randint(0, X) for i in range(A)]
+print(list)
+for i in range(A):
+    if list[i]==X:
+        count+=1
+print(f" В данном массиве, {count} шт. чисел {X}")

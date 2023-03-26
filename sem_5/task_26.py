@@ -7,22 +7,19 @@
 #     A = 2; B = 3 -> 8
 
 
-def fib(n):
-    if n in [1, 2]:
+def POW(a,b):
+    if b==0:
         return 1
-    return fib(n - 1) + fib(n - 2)
-
-list_1 = []
-for i in range(1, 10):
-    list_1.append(fib(i))
-print(list_1)
-
-print(fib(7))
-
-def super_recurse():
-    number = input()
-    if number != '':
-        super_recurse()
-    print(number)
-
-super_recurse()
+    return POW(a,b-1)*a    
+  
+while True:
+    try:
+        a=int(input("Введите число : "))
+        b=int(input("Введите степень : "))
+        break
+    except:
+        print("Неверный ввод,попробуйте ещё")
+if b<0:
+    print(f" Число {a} , в степени {b} равно {a**(1/-b)}")
+else:
+    print(f" Число {a} , в степени {b} равно {POW(a,b)}")

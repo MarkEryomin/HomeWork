@@ -11,3 +11,18 @@
 
 # **Ввод:** пара-ра-рам рам-пам-папам па-ра-па-да    
 #     **Вывод:** Парам пам-пам
+
+
+def define_rhythm(text_song):
+    def_list = text_song.lower().split()
+    print(def_list)
+    f = lambda x: sum(1 for i in x if i in 'аеёиоуыэюя')
+    temp = f(def_list[0])
+    if all([f(i) == temp for i in def_list]):
+        return 'Парам пам-пам'
+    return 'Пам парам'
+
+text_song=input("Введите текст песни : ")
+print(define_rhythm(text_song))
+
+    

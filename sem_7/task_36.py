@@ -15,3 +15,26 @@
 # 4  8  12 16 20 24
 # 5  10 15 20 25 30
 # 6  12 18 24 30 36
+
+def print_operation_table(operation, num_rows, num_columns):
+    for i in range(1,num_rows+1):
+        res=[]
+        for j in range(1,num_columns+1):
+            res.append(str(operation(i,j)))
+        print(''.join(f'{e:<4}' for e in res))
+ 
+num_rows=int(input("Введите количество строк : "))
+num_columns=int(input("Введите количество столбцов : "))
+print_operation_table(lambda x, y: x * y,num_rows, num_columns)
+
+
+# num_rows=int(input("Введите количество строк : "))
+# num_columns=int(input("Введите количество столбцов : "))
+# list1=[x for x in range(1,num_columns+1)]
+# i=1
+# while i<=num_rows:
+#     list1=[x for x in range(1,num_columns+1)]
+#     for j in range(len(list1)):
+#         list1[j]*=i
+#     print(*list1 )
+#     i=i+1

@@ -162,5 +162,5 @@ def print_contacts(contact_list: list):
 
 
 if __name__ == '__main__':
-    file = ''
+    file = 'Phonebook.txt'
     choose_action(file)
